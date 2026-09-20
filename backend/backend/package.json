@@ -1,0 +1,31 @@
+{
+  "name": "civiclens-ai-backend",
+  "version": "1.0.0",
+  "description": "CivicLens AI - AI-powered civic issue reporting backend",
+  "main": "dist/server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "seed": "ts-node src/seed/seed.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.14.9",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}

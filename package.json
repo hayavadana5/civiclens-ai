@@ -1,0 +1,15 @@
+{
+  "name": "civiclens-ai",
+  "version": "1.0.0",
+  "description": "CivicLens AI — AI-powered civic issue reporting and resolution platform for Bengaluru",
+  "scripts": {
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend/backend && npm install && npm run build",
+    "build:frontend": "cd frontend && npm install && npm run build",
+    "start:backend": "cd backend/backend && npm start",
+    "start:frontend": "cd frontend && npm run preview"
+  },
+  "keywords": ["civic-tech", "ai", "bengaluru", "bbmp", "civiclens"],
+  "author": "",
+  "license": "MIT"
+}
