@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: civiclens-backend
+    env: node
+    rootDir: backend/backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: MONGODB_URI
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
