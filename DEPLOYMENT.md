@@ -24,6 +24,7 @@ This guide covers deploying **CivicLens AI** to production.
 ## 3. Step-by-Step Deployment (Recommended: Vercel + Render + MongoDB Atlas)
 
 ### Step A: Set up Free MongoDB Atlas
+
 1. Go to [MongoDB Atlas](https://www.mongodb.com/atlas) and create a free account.
 2. Create a free shared cluster (**M0 Sandbox**).
 3. Under **Database Access**, create a database user (e.g. `civiclens_admin` + password).
@@ -38,6 +39,7 @@ This guide covers deploying **CivicLens AI** to production.
 ### Step B: Deploy Backend (Render / Railway)
 
 #### Deploying on Render (Free Web Service):
+
 1. Push your repository to GitHub.
 2. Sign in to [Render](https://render.com) and click **New Web Service**.
 3. Connect your GitHub repository.
@@ -53,11 +55,13 @@ This guide covers deploying **CivicLens AI** to production.
    | `PORT` | `10000` (or leave default) | Render sets port automatically |
    | `MONGODB_URI` | `mongodb+srv://...` | Your MongoDB Atlas connection string |
    | `CORS_ORIGIN` | `*` (or your Vercel URL) | Allows frontend calls |
-   | `GEMINI_API_KEY` | *(Optional)* | For Gemini AI triage (fallback runs if empty) |
+   | `GEMINI_API_KEY` | _(Optional)_ | For Gemini AI triage (fallback runs if empty) |
 6. Click **Create Web Service**. Once deployed, copy the Render service URL (e.g. `https://civiclens-api.onrender.com`).
 
 #### Seed Initial Production Data (Optional):
+
 In Render Shell or locally pointing at Atlas:
+
 ```bash
 MONGODB_URI="mongodb+srv://..." npm run seed
 ```
@@ -67,6 +71,7 @@ MONGODB_URI="mongodb+srv://..." npm run seed
 ### Step C: Deploy Frontend (Vercel / Netlify)
 
 #### Deploying on Vercel:
+
 1. Sign in to [Vercel](https://vercel.com) and click **Add New Project**.
 2. Import your GitHub repository.
 3. In the project configuration:
